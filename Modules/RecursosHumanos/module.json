@@ -1,0 +1,14 @@
+{
+    "name": "RecursosHumanos",
+    "alias": "recursoshumanos",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\RecursosHumanos\\Providers\\ObserverServiceProvider",
+        "Modules\\RecursosHumanos\\Providers\\RecursosHumanosServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

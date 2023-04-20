@@ -1,0 +1,282 @@
+:root {
+    --fondo: #e6e6e6;
+    --fondo2: #ccc;
+    --fondo3: #b3b3b3;
+    --texto: #253746;
+    --borde: 2px solid #b3b3b3;
+    --bordeForm: 1px solid #253746;
+}
+
+@font-face {
+    font-family: "Museo Sans 500";
+    src: url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot");
+    src: url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.svg#Museo Sans 500") format("svg");
+}
+
+@font-face {
+    font-family: SharikSansBold;
+    src: local("Sharik Sans Bold"), local("SharikSans-Bold"), url(../fonts/fuentes/SharikSansBold.otf);
+    font-weight: bold;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+}
+
+.content{
+    position: relative;
+}
+
+.izquierda{
+    position: absolute;
+    left: 0;
+    display:inline-block;
+    height:100vh;
+}
+
+.centro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display:inline-block;
+    height:100vh;
+}
+
+.derecha{
+    position: absolute;
+    right: 0;
+    display:inline-block;
+    height:100vh;
+}
+
+
+.logo, .calculadora{
+    display:block;
+    margin:auto;
+}
+
+.logo{
+    width: 150px;
+}
+
+.calculadora{
+    float: right;
+    width: 100px;
+}
+
+
+.caption{
+    border-top: var(--borde);
+    border-left: var(--borde);
+    border-right: var(--borde);
+    padding: 0.5rem;
+}
+
+.texto {
+    color: var(--texto);
+    font-family: "Museo Sans 500", serif;
+}
+
+.texto2 {
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.titulo{
+    font-size: 1.5rem;
+}
+
+table{
+    border: var(--borde);
+}
+
+
+.thead {
+    background-color: var(--fondo2);
+    color: var(--texto);
+}
+
+.theadGris {
+    background-color: var(--fondo3);
+    color: var(--texto);
+}
+
+
+input,
+select {
+    border: var(--bordeForm) !important;
+    background-color: var(--fondo) !important;
+    color: var(--texto);
+}
+
+input[type=checkbox] {
+    position: relative;
+      cursor: pointer;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: var(--bordeForm);
+    border-radius: 3px;
+    background-color: var(--fondo);
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid var(--texto);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+hr {
+    border: var(--bordeForm) !important;
+}
+
+
+.texto-equivalencia{
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+/* Pantallas muy grandes  (desktops de más de 1200px de ancho)
+No hace falta media-query porque será nuestro diseño por defecto */
+
+/* Pantallas grandes (desktops de menos de 1200px) */
+@media (max-width: 1199.98px) {  
+    .calculadora{
+        width: 80px;
+    }
+    .titulo{
+        font-size: 1.2rem;
+    }
+    .texto2{
+        font-size: 0.9rem;
+    }
+    .texto-equivalencia{
+        font-size: 1.0rem;
+    }
+    .izquierda, .derecha {
+        display:none;
+    }
+    .parrafo{
+        font-size: 0.9rem;
+    }
+    .titulo-caption{
+        font-size: 1.1rem;
+    }
+    thead, tbody{
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas medianas (tablets de menos de 992px) */
+@media (max-width: 991.98px) { /**/
+    .calculadora{
+        width: 80px;
+    }
+    .titulo{
+        font-size: 1.1rem;
+    }
+    .texto2{
+        font-size: 0.9rem;
+    }
+    .texto-equivalencia{
+        font-size: 1.0rem;
+    }
+    .izquierda, .derecha {
+        display:none;
+    }
+    .parrafo{
+        font-size: 0.8rem;
+    }
+    .titulo-caption{
+        font-size: 1rem;
+    }
+    thead, tbody{
+        font-size: 0.8rem;
+    }
+}
+
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+@media (max-width: 767.98px) { 
+    .calculadora{
+        width: 75px;
+    }
+    .titulo{
+        font-size: 1.05rem;
+    }
+    .texto2{
+        font-size: 0.85rem;
+    }
+    .texto-equivalencia{
+        font-size: 1.0rem;
+    }
+    .izquierda, .derecha {
+        display:none;
+    }
+    .parrafo{
+        font-size: 0.75rem;
+    }
+    .titulo-caption{
+        font-size: 0.95rem;
+    }
+    thead, tbody{
+        font-size: 0.75rem;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 575.98px) { 
+    .calculadora{
+        width: 70px;
+    }
+    .titulo{
+        font-size: 1rem;
+    }
+    .texto2{
+        font-size: 0.8rem;
+    }
+    .texto-equivalencia{
+        font-size: 0.9rem;
+    }
+    .izquierda, .derecha {
+        display:none;
+    }
+    .parrafo{
+        font-size: 0.7rem;
+    }
+    .titulo-caption{
+        font-size: 0.9rem;
+    }
+    thead, tbody{
+        font-size: 0.7rem;
+    }
+}

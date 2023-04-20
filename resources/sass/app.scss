@@ -1,0 +1,125 @@
+@import "app/styles.min.css";
+
+// Bootstrap
+@import "app/bootstrap.min.css";
+
+// styles
+@import "app/bootstrap_limitless.min.css";
+@import "app/layout.min.css";
+@import "app/components.min.css";
+@import "app/colors.min.css";
+
+@import "app/font-awesome.min.css";
+
+// datatables
+@import "app/jquery.dataTables.min.css";
+@import "app/buttons.dataTables.min.css";
+
+@import "loadAwesome.scss";
+
+
+.header-button {
+  transition: border-bottom 80ms;
+}
+
+.header-button:hover {
+  font-weight: bold;
+  transform: scale(1.1); 
+  border-bottom: 2px solid #009688;
+  padding-bottom: 1px;
+}
+
+
+.page-loader-wrapper {
+  background-color: #009688;
+  z-index: 99999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.page-loader-wrapper p {
+  margin-top: 10px;
+  color: #fff;
+}
+.page-loader-wrapper .loader {
+  position: relative;
+  top: calc(40% - 30px);
+}
+.m-t-30 {
+  margin-top: 30px;
+}
+
+.dataTable tbody > tr.selected,
+.dataTable tbody > tr > .selected {
+  background-color: #b5d8d4 !important;
+}
+
+.dataTable tbody > tr > td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+label.error {
+  color: red;
+  font-size: 0.8rem;
+  // color: #2196f3;
+}
+
+// spinner
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #009688;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
